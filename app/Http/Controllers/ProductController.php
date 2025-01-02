@@ -22,5 +22,10 @@ class ProductController extends Controller
         $product->update($request->all());
         return response()->json($product,200);
     }
+
+    public function destroy(Product $product){
+        $product->delete();
+        return response()->json('Deleted',204);
+    }
 }
 
